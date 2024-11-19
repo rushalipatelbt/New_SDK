@@ -1,0 +1,385 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name DemoFramworkWithDepency
+import Alamofire
+import CoreTelephony
+@_exported import DemoFramworkWithDepency
+import DeveloperToolsSupport
+import Foundation
+import IQKeyboardManagerSwift
+import MessageUI
+import NVActivityIndicatorView
+import Network
+import SDWebImage
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_Concurrency.MainActor(unsafe) open class BlostemSDK : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor(unsafe) public func registerCell(type: UIKit.UITableViewCell.Type, identifier: Swift.String? = nil)
+  @_Concurrency.MainActor(unsafe) public func dequeueCell<T>(withType type: UIKit.UITableViewCell.Type) -> T? where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) public func dequeueCell<T>(withType type: UIKit.UITableViewCell.Type, for indexPath: Foundation.IndexPath) -> T? where T : UIKit.UITableViewCell
+}
+extension UIKit.UITableViewCell {
+  @_Concurrency.MainActor(unsafe) public static var identifier: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BottomPopupViewController : UIKit.UIViewController, DemoFramworkWithDepency.BottomPopupAttributesDelegate {
+  @_Concurrency.MainActor(unsafe) weak open var popupDelegate: (any DemoFramworkWithDepency.BottomPopupDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open func updatePopupHeight(to height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) open var popupHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupTopCornerRadius: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupPresentDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupDismissDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupShouldDismissInteractivelty: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupDimmingViewAlpha: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupShouldBeganDismiss: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupViewAccessibilityIdentifier: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public protocol BottomPopupDelegate : AnyObject {
+  func bottomPopupViewLoaded()
+  func bottomPopupWillAppear()
+  func bottomPopupDidAppear()
+  func bottomPopupWillDismiss()
+  func bottomPopupDidDismiss()
+  func bottomPopupDismissInteractionPercentChanged(from oldValue: CoreFoundation.CGFloat, to newValue: CoreFoundation.CGFloat)
+}
+extension DemoFramworkWithDepency.BottomPopupDelegate {
+  public func bottomPopupViewLoaded()
+  public func bottomPopupWillAppear()
+  public func bottomPopupDidAppear()
+  public func bottomPopupWillDismiss()
+  public func bottomPopupDidDismiss()
+  public func bottomPopupDismissInteractionPercentChanged(from oldValue: CoreFoundation.CGFloat, to newValue: CoreFoundation.CGFloat)
+}
+public protocol BottomPopupAttributesDelegate : AnyObject {
+  var popupHeight: CoreFoundation.CGFloat { get }
+  var popupTopCornerRadius: CoreFoundation.CGFloat { get }
+  var popupPresentDuration: Swift.Double { get }
+  var popupDismissDuration: Swift.Double { get }
+  var popupShouldDismissInteractivelty: Swift.Bool { get }
+  var popupDimmingViewAlpha: CoreFoundation.CGFloat { get }
+  var popupShouldBeganDismiss: Swift.Bool { get }
+  var popupViewAccessibilityIdentifier: Swift.String { get }
+}
+public enum BottomPopupConstants {
+}
+public enum IconType : Swift.Int {
+  case font
+  case image
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SkyFloatingLabelTextFieldWithIcon : DemoFramworkWithDepency.SkyFloatingLabelTextField {
+  @_Concurrency.MainActor(unsafe) open var iconType: DemoFramworkWithDepency.IconType {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var iconImageView: UIKit.UIImageView!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var templateImage: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var iconLabel: UIKit.UILabel!
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var iconFont: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var iconText: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedIconColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconMarginLeft: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var iconMarginBottom: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var iconRotationDegrees: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreFoundation.CGRect, iconType: DemoFramworkWithDepency.IconType)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) override open func updateColors()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func placeholderRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) open class BottomPopupNavigationController : UIKit.UINavigationController, DemoFramworkWithDepency.BottomPopupAttributesDelegate {
+  @_Concurrency.MainActor(unsafe) weak open var popupDelegate: (any DemoFramworkWithDepency.BottomPopupDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) open var popupHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupTopCornerRadius: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupPresentDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupDismissDuration: Swift.Double {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupShouldDismissInteractivelty: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupDimmingViewAlpha: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupShouldBeganDismiss: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var popupViewAccessibilityIdentifier: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension DemoFramworkWithDepency.BottomPopupNavigationController {
+  @_Concurrency.MainActor(unsafe) public func updatePopupHeight(to height: CoreFoundation.CGFloat)
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor(unsafe) public func registerCell(type: UIKit.UICollectionViewCell.Type, identifier: Swift.String? = nil)
+  @_Concurrency.MainActor(unsafe) public func registerHeaderCell(type: UIKit.UICollectionReusableView.Type, supplementaryViewOfKind: Swift.String, identifier: Swift.String? = nil)
+  @_Concurrency.MainActor(unsafe) public func dequeueCell<T>(withType type: UIKit.UICollectionViewCell.Type, for indexPath: Foundation.IndexPath) -> T? where T : UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) public func dequeueHeaderView<T>(viewForSupplementaryElementOfKind kind: Swift.String, withType type: UIKit.UICollectionReusableView.Type, for indexPath: Foundation.IndexPath) -> T? where T : UIKit.UICollectionReusableView
+}
+extension UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor(unsafe) public static var identifier: Swift.String {
+    get
+  }
+}
+extension UIKit.UICollectionReusableView {
+  @_Concurrency.MainActor(unsafe) public static var headerIdentifier: Swift.String {
+    get
+  }
+}
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public enum ErrorMessagePlacement {
+  case `default`
+  case bottom
+  public static func == (a: DemoFramworkWithDepency.ErrorMessagePlacement, b: DemoFramworkWithDepency.ErrorMessagePlacement) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class SkyFloatingLabelTextField : UIKit.UITextField {
+  @objc @_Concurrency.MainActor(unsafe) open var isLTRLanguage: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var titleFadeInDuration: Swift.Double
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var titleFadeOutDuration: Swift.Double
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var textColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var placeholderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var placeholderFont: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var errorMessagePlacement: DemoFramworkWithDepency.ErrorMessagePlacement {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var errorLabelAlignment: UIKit.NSTextAlignment? {
+    get
+    set
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic open var titleFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var titleColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var lineColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var errorColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var lineErrorColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var textErrorColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var titleErrorColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var disabledColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedTitleColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedLineColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var lineHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic open var selectedLineHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var lineView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) open var titleLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) open var errorLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) open var titleFormatter: (_ text: Swift.String) -> Swift.String
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSecureTextEntry: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var errorMessage: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var editingOrSelected: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var hasErrorMessage: Swift.Bool {
+    get
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var placeholder: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedTitle: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var title: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) open func editingChanged()
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func becomeFirstResponder() -> Swift.Bool
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func resignFirstResponder() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open func updateColors()
+  @_Concurrency.MainActor(unsafe) open func setTitleVisible(_ titleVisible: Swift.Bool, animated: Swift.Bool = false, animationCompletion: ((_ completed: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) open func isTitleVisible() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func isErrorVisible() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func placeholderRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) open func titleLabelRectForBounds(_ bounds: CoreFoundation.CGRect, editing: Swift.Bool) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) open func errorLabelRectForBounds(_ bounds: CoreFoundation.CGRect, editing: Swift.Bool) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) open func lineViewRectForBounds(_ bounds: CoreFoundation.CGRect, editing: Swift.Bool) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) open func titleHeight() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) open func errorHeight() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) open func textHeight() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @objc deinit
+}
+extension DemoFramworkWithDepency.IconType : Swift.Equatable {}
+extension DemoFramworkWithDepency.IconType : Swift.Hashable {}
+extension DemoFramworkWithDepency.IconType : Swift.RawRepresentable {}
+extension DemoFramworkWithDepency.ErrorMessagePlacement : Swift.Equatable {}
+extension DemoFramworkWithDepency.ErrorMessagePlacement : Swift.Hashable {}

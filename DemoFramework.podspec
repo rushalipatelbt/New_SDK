@@ -2,9 +2,9 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DemoFramework"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.0"
   spec.summary      = "DemoFramework provide data"
-  spec.description  = "This is demo description"
+  spec.description  = "This is demo description. It provides data integrate"
   spec.homepage     = "https://github.com/rushalipatelbt/New_SDK"
   
   spec.license      = { :type => "MIT", :file => "LICENSE" }
@@ -13,38 +13,24 @@ Pod::Spec.new do |spec|
   
   spec.ios.deployment_target = "13.0"
   
-  #spec.source       = { :git => "http://EXAMPLE/DemoFramework.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/rushalipatelbt/New_SDK.git"}
 
   spec.source_files  = "DemoFramework/**/*.{h,m,swift}"
+  #spec.resources    = ['DemoFramework/Resources/*', 'DemoFramework/**/*.xib']
+  
+  spec.swift_versions = ['5.0', '5.1', '5.2', '5.3']
+  
+  spec.vendored_frameworks = 'DemoFramworkWithDepency.framework'
+  #spec.platform         = :ios
 
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
-
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 
   spec.dependency            'PayUIndia-CheckoutPro', '~> 8.2'
-  spec.dependency            'Alamofire', '~> 5.10.1'
+  spec.dependency            'NVActivityIndicatorView', '~> 5.2'
+  spec.dependency            'IQKeyboardManagerSwift', '~> 6.4'
+  spec.dependency            'SDWebImage', '~> 5.0'
+  spec.dependency            'Alamofire', '~> 5.0'
 
 end
