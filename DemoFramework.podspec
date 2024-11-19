@@ -28,9 +28,5 @@ Pod::Spec.new do |spec|
 
 
   spec.dependency            'PayUIndia-CheckoutPro', '~> 8.2'
-  spec.dependency            'NVActivityIndicatorView', '~> 5.2'
-  spec.dependency            'IQKeyboardManagerSwift', '~> 6.4'
-  spec.dependency            'SDWebImage', '~> 5.0'
-  spec.dependency            'Alamofire', '~> 5.0'
 
 end
